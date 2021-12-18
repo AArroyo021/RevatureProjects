@@ -7,7 +7,7 @@ Class to save customers personal information:
 """
 
 class Customer:
-    def __init__(self, first_name: str, last_name: str, bank_account: int, customer_id: int):
+    def __init__(self, first_name: str, last_name: str, bank_account: [int], customer_id: int):
         self.first_name = first_name
         self.last_name = last_name
         self.bank_account = bank_account

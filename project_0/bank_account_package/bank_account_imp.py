@@ -3,7 +3,7 @@ from project_0.bank_account_package.bank_account_abstract import BankAccountAbs
 
 
 class BankAccountImp(BankAccountAbs):
-    bank_account_ex = BankAccount(1234.56, 0)
+    bank_account_ex = BankAccount(1234.56, 0, 1)
     bank_account_list = [bank_account_ex]
     account_num_for_now = 0
 

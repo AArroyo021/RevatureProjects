@@ -35,3 +35,13 @@ class CustomerPostgresImp(CustomerImp):
         cursor.execute(sql, [customer_id])
         connection.commit()
         return True
+
+    def get_all_customers(self):
+        sql = "select * from customer"
+        cursor = connection.cursor()
+        cursor.execute(sql)
+        customer_record = cursor.fetchall()
+        customer_list = []
+        for bank_account in customer_record:
+            customer_list.append(Customer(*bank_account))
+        return customer_list

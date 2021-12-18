@@ -8,10 +8,14 @@ class CustomerImp(CustomerAbs):
     id_for_now = 0
 
     def create_customer(self, customer: Customer):
-        customer.customer_id = CustomerImp.id_for_now
-        CustomerImp.id_for_now += 1
-        CustomerImp.customer_list.append(customer)
-        return customer
+        for current_customer in self.customer_list:
+            if (customer.customer_id == current_customer.customer_id) or (customer.bank_account == current_customer.bank_account):
+                print("error")
+        else:
+            customer.customer_id = CustomerImp.id_for_now
+            CustomerImp.id_for_now += 1
+            CustomerImp.customer_list.append(customer)
+            return customer
 
     def get_customer_info(self, customer_id: int):
         for customer in CustomerImp.customer_list:

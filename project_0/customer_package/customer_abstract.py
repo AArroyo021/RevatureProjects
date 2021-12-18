@@ -20,3 +20,7 @@ class CustomerAbs(ABC):
     @abstractmethod
     def delete_customer_info(self, customer_id: int):
         pass
+
+    @abstractmethod
+    def get_all_customers(self):
+        pass

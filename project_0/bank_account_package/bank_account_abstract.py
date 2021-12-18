@@ -20,3 +20,7 @@ class BankAccountAbs(ABC):
     @abstractmethod
     def delete_bank_account_info(self, bank_account_num: int):
         pass
+
+    @abstractmethod
+    def get_all_bank_accounts(self):
+        pass
