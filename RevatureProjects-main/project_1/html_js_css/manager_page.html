@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ManagerPage</title>
+    <link rel="stylesheet" href="manager_page.css">
+</head>
+<body>
+    <button id="logout" onclick="logout()">logout</button>
+
+    <h1 style="text-align: center;">Manager Page</h1>
+    <br>
+    
+    <!-- Tab links -->
+    <div class="tab">
+        <button class="tablinks" id="pendingTab" onclick="openTabs(event, 'Pending')">Pending</button>
+        <button class="tablinks" id="completedTab" onclick="openTabs(event, 'Completed')">Completed</button>
+        <button class="tablinks" id="statisticsTab" onclick="openTabs(event, 'Statistics')">Statistics</button>
+    </div>
+    
+  
+  <!-- Tab content -->
+    <div id="Pending" class="tabcontent">
+        <button id="updatePending">Update</button>
+        <table id="reimbursementPendingTable">
+            <thead id="reimbursementPendingHead">
+                <tr>
+                    <th>Claim Number</th>
+                    <th>Employee ID</th>
+                    <th>Claim Amount</th>
+                    <th>Claim Reason</th>
+                    <th>Claim Status</th>
+                    <th>Manager Validation</th>
+                    <th>Manager Reasoning</th>
+                    <th>Date Sent</th>
+                    <th>Date Validated</th>
+                </tr>
+            </thead>
+            <!-- the content of the table will be dynamically generated -->
+            <tbody id="reimbursementPendingBody">
+                <!-- content will be added dynamically -->
+            </tbody>
+        </table>
+    </div>
+
+    <div id="Completed" class="tabcontent">
+        <table id="reimbursementCompletedTable">
+            <thead id="reimbursementCompletedHead">
+                <tr>
+                    <th>Claim Number</th>
+                    <th>Employee ID</th>
+                    <th>Claim Amount</th>
+                    <th>Claim Reason</th>
+                    <th>Claim Status</th>
+                    <th>Manager Validation</th>
+                    <th>Manager Reasoning</th>
+                    <th>Date Sent</th>
+                    <th>Date Validated</th>
+                </tr>
+            </thead>
+            <!-- the content of the table will be dynamically generated -->
+            <tbody id="reimbursementCompletedBody">
+                <!-- content will be added dynamically -->
+            </tbody>
+        </table>
+    </div>
+
+    <div id="Statistics" class="tabcontent">
+        <table id="statisticsTable">
+            <thead id="statisticsHead">
+                <tr>
+                    <th>Most Expensive Claim</th>
+                    <th>Employee With Most Claims</th>
+                    <th>Average Claim Amount</th>
+                    <th>Employee With Least Claims</th>
+                    <th>Least Expensive Claim</th>
+                </tr>
+            </thead>
+            <!-- the content of the table will be dynamically generated -->
+            <tbody id="statisticsBody">
+                <!-- content will be added dynamically -->
+            </tbody>
+        </table>
+    </div>
+
+</body>
+<script src="manager_page.js"></script>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EmployeePage</title>
+    <link rel="stylesheet" href="employee_page.css">
+</head>
+<body>
+    <button id="logout" onclick="logout()">logout</button>
+
+    <h1 style="text-align: center;">Employee Reimbursement Page</h1>
+    <br>
+
+    <!-- Tab links -->
+    <div class="tab">
+        <button class="tablinks" id="pendingTab" onclick="openTabs(event, 'Pending')">Create A Reimbursement</button>
+        <button class="tablinks" id="completedTab" onclick="openTabs(event, 'Completed')">Completed Reimbursements</button>
+    </div>
+  
+  <!-- Tab content -->
+    <div id="Pending" class="tabcontent">
+        <h4>Reimbursement Reason</h4>
+        <input type="text" id="reasonInput" placeholder="Reasoning">
+        <br>
+        <h4>Reimbursement Amount</h4>
+        <input type="number" id="amountInput" placeholder="Amount">
+        <br>
+        <button id="getReimbursement">Create</button>
+    </div>
+
+    <div id="Completed" class="tabcontent">
+        <table id="reimbursementTable">
+            <thead id="reimbursementHead">
+                <tr>
+                    <th>Claim Number</th>
+                    <th>Employee ID</th>
+                    <th>Claim Amount</th>
+                    <th>Claim Reason</th>
+                    <th>Claim Status</th>
+                    <th>Manager Validation</th>
+                    <th>Manager Reasoning</th>
+                    <th>Date Sent</th>
+                    <th>Date Validated</th>
+                </tr>
+            </thead>
+            <!-- the content of the table will be dynamically generated -->
+            <tbody id="reimbursementBody">
+                <!-- content will be added dynamically -->
+            </tbody>
+        </table>
+    </div>
+
+
+
+</body>
+<script src="employee_page.js"></script>
+</html>
